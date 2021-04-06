@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0;
+    margin-top: 30px;
+}
+
+.card .component {
+    width: 80%;
+    margin: auto;
+    background: cyan;
+    padding: 100px 50px;
+    position: relative;
+    color: #fff;
+    transition: .5s;
+}
+
+.card .component:hover {
+    transform: translateY(-15px) scale(1.1);
+    z-index: 1;
+}
+
+.card .component img {
+    position: relative;
+    top: -45px;
+    margin-bottom: 15px;
+    animation: animate .7s linear forwards;
+}
+
+.attribution {
+    width: 100%;
+    background: #262626;
+    padding: 25px;
+    font-size: 11px;
+    text-align: center;
+    z-index: 999;
+    color: #fff;
+}
+
+.attribution a {
+    text-decoration: none;
+    font-weight: 700;
+    color: hsl(228, 45%, 44%);
+}
+
+@keyframes animate {
+    from {
+        left: -50px;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+.card .component span {
+    position: relative;
+    left: -68px;
+    display: inline-block;
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.card .component:first-child {
+    background: hsl(31, 77%, 52%);
+    border-radius: 15px 15px 0 0;
+}
+
+.card .component:nth-child(2) {
+    background: hsl(184, 100%, 22%);
+}
+
+.card .component:last-child {
+    background: hsl(179, 100%, 13%);
+    border-radius: 0 0 15px 15px;
+}
+
+.card .component p {
+    color: transparent;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+.card .component .btn {
+    position: relative;
+    top: 25px;
+    width: 90%;
+    background: none;
+    border: none;
+    outline: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 15px;
+    transition: .5s;
+}
+
+.card .component button[type=button]:hover {
+    background: none;
+    color: hsla(0, 0%, 100%, 0.75);
+    border: 2px solid hsla(0, 0%, 100%, 0.75);
+}
+
+.card .component .btn.sedans {
+    color: hsl(31, 77%, 52%);
+}
+
+.card .component .btn.suv {
+    color: hsl(184, 100%, 22%);
+}
+
+.card .component .btn.luxury {
+    color: hsl(179, 100%, 13%);
+}
+
+@media (min-width:992px) {
+    .card {
+        width: 70%;
+        height: 480px;
+        margin: 50% auto;
+        flex-direction: row;
+    }
+
+    .card .component {
+        height: 500px;
+    }
+    
+    .card .component:first-child {
+        border-radius: 15px 0 0 15px;
+    }
+
+    .card .component:last-child {
+        border-radius: 0 15px 15px 0;
+    }
+
+    .card .component img {
+        top: -50px;
+    }
+
+    .card .component span {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    .card .component p {
+        width: 100%;
+        word-spacing: 2px;
+    }
+
+    .card .component .btn {
+        top: 120px;
+    }
+
+    .attribution {
+        position: relative;
+        bottom: -55px;
+        font-size: 2rem;
+    }
+}
